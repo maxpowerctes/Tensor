@@ -55,7 +55,6 @@ app = Flask(__name__)
 @app.route('/api/photo-recognize', methods=['POST'])
 def photoRecognize():
     answer = run_inference_on_image(request.form['image_data'])
-    // TODO: do some logic with answer here
     return jsonify(status='OK', results=answer)
 
 @app.route('/')
